@@ -432,7 +432,7 @@ export type ResourceOptions<T> = undefined extends T
       onHydrated?: <S, T>(k: S, info: ResourceFetcherInfo<T>) => void;
     };
 
-export type ResourceReturn<T, O extends ResourceOptions<T | undefined> | undefined, K = T> = [
+export type ResourceReturn<T, O extends ResourceOptions<T | undefined> | undefined = undefined, K = T> = [
   Resource<
     O extends undefined | null
       ? T | undefined
